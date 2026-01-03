@@ -1,0 +1,50 @@
+<config>
+  <native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
+    <hostname>Task36_hostname</hostname>
+    <router>
+      <ospf xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-ospf">
+        <id>1</id>
+
+        <router-id>1.1.1.1</router-id>
+
+        <network>
+          <ip>192.168.110.0</ip>
+          <mask>0.0.0.255</mask>
+          <area>0</area>
+        </network>
+      </ospf>
+    </router>
+  </native>
+
+  <interfaces xmlns="urn:ietf:params:xml:ns:yang:ietf-interfaces">
+    <interface>
+      <name>Loopback3</name>
+      <type xmlns:ianaift="urn:ietf:params:xml:ns:yang:iana-if-type">
+        ianaift:softwareLoopback
+      </type>
+      <enabled>true</enabled>
+      <ipv4 xmlns="urn:ietf:params:xml:ns:yang:ietf-ip">
+        <address>
+          <ip>10.0.0.2</ip>
+          <netmask>255.255.255.255</netmask>
+        </address>
+      </ipv4>
+    </interface>
+  </interfaces>
+
+  <interfaces xmlns="urn:ietf:params:xml:ns:yang:ietf-interfaces">
+    <interface>
+      <name>Loopback4</name>
+      <type xmlns:ianaift="urn:ietf:params:xml:ns:yang:iana-if-type">
+        ianaift:softwareLoopback
+      </type>
+      <enabled>true</enabled>
+      <ipv4 xmlns="urn:ietf:params:xml:ns:yang:ietf-ip">
+        <address>
+          <ip>10.0.0.3</ip>
+          <netmask>255.255.255.255</netmask>
+        </address>
+      </ipv4>
+    </interface>
+  </interfaces>
+</config>
